@@ -5,8 +5,15 @@ O jogo foi construído em cima de um processador criado e utilizado para as disi
 
 ## Como jogar?
 
-Para jogar, faça o download desse repositório e utilize o Sublime Text dentro da pasta para abrir o arquivo JodoDaMemoria.asm.
-Com o arquivo aberto, apenas aperte F7 que o jogo deve compilar.
+Para jogar, faça o download desse repositório e utilize o Sublime Text dentro da pasta para abrir o arquivo:
+
+`JodoDaMemoria.asm`
+
+Com o arquivo aberto, apenas aperte: 
+
+`F7`
+então o jogo deve compilar.
+
 
 ## Links úteis
 
