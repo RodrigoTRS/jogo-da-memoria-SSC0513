@@ -12,6 +12,7 @@ Para jogar, faça o download desse repositório e utilize o Sublime Text dentro 
 Com o arquivo aberto, apenas aperte: 
 
 `F7`
+
 então o jogo deve compilar.
 
 
