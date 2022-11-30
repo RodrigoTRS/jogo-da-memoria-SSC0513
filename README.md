@@ -1,7 +1,7 @@
 # Jogo da memória
 
 Esse repositório é referente à um trabalho da disciplina de Arquitetura e Organização de Computadores, ministrada pelo professor Eduardo Simões, na USP - São Carlos.
-O jogo foi construído em cima de um processador criado e utilizado para as disisciplinas de todo o ICMC.
+O jogo foi construído em cima de um processador criado e utilizado para as disciplinas de todo o ICMC.
 
 ## Como jogar?
 
