@@ -13,7 +13,7 @@ Com o arquivo aberto, apenas aperte:
 
 `F7`
 
-então o jogo deve compilar.
+então o jogo deve rodar.
 
 
 ## Links úteis
