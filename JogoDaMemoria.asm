@@ -7,47 +7,53 @@ main:
 		
 		loadn r7, #48; r7 é a pontuação
 		
-		call ApagaPontos
-		call ApagaTela
-		call InitialMsg
+		call ApagaPontos; Apaga os pontos da Tela
+		call ApagaTela; Apaga tudo que está na tela
+		
+		call InitialMsg; Tela inicial do jogo
+		call WaitPress; Espera pelo aperto do "espaço para progredir"
+		call ApagaTela; Apaga tudo que está na tela
+		
+		call IntroMsg; Mensagem introdutória
 		call WaitPress
-		call ApagaTela
-		call IntroMsg
-		call WaitPress
+		
 		reset:
 			
-			call ApagaTela
+			call ApagaTela; Apaga tudo que está na tela
+			call PrintPontos; Inicializa os pontos na tela
 			
-			call PrintPontos
+			;-----------------------        Nível 1
 			call Nvl1Msg
 			call Nvl1Reader
-			call IncremetaPontos
+			call IncremetaPontos; Incrementa os pontos
 			
-			call ApagaTela
+			call ApagaTela; Apaga tudo que está na tela
 			
+			;-----------------------        Nível 2
 			call Nvl2Msg
 			call Nvl2Reader
-			call IncremetaPontos
+			call IncremetaPontos; Incrementa os pontos
 			
-			call ApagaTela
+			call ApagaTela; Apaga tudo que está na tela
 			
+			;-----------------------        Nível 3
 			call Nvl3Msg
 			call Nvl3Reader
-			call IncremetaPontos
+			call IncremetaPontos; Incrementa os pontos
 			
 			call WIN
 			end:
-				call RestartReader
+				call RestartReader; Aguarda apertar "espaço" para recomeçar o jogo
 			
 
 WIN:
-	call ApagaTela
-	call WinMsg
-	call RestartReader
+	call ApagaTela; Apaga tudo que está na tela
+	call WinMsg; Mensagem de vitória
+	call RestartReader; Aguarda apertar "espaço" para recomeçar o jogo
 
 LOSS:
-	call ApagaTela
-	call LossMsg
+	call ApagaTela; Apaga tudo que está na tela
+	call LossMsg; Mensagem de derrota
 	jmp end
 	
 
@@ -95,7 +101,7 @@ PrintOut:
 
 StringPontos: string "Pontos: "
 
-PrintPontos:
+PrintPontos:; Imprime os pontos na tela
 	loadn r0, #8
 	loadn r2, #2816
 	add r7, r7, r2
@@ -108,7 +114,7 @@ PrintPontos:
 	
 	rts
 	
-ApagaPontos:
+ApagaPontos:; Apaga os pontos na tela
 	loadn r0, #0
 	loadn r1, #StringApagaPontos
 	loadn r2, #0
@@ -118,7 +124,7 @@ ApagaPontos:
 	
 StringApagaPontos: string "                                       "
 	
-IncremetaPontos:
+IncremetaPontos:; Incrementa os pontos e imprime na tela
 	inc r7
 	call PrintPontos
 	rts
@@ -128,7 +134,7 @@ IncremetaPontos:
 ;---------------------------	
 ; Message Functions
 ;
-InitialMsg:
+InitialMsg:; Mensagem inicial
 	loadn r0, #160
 	loadn r1, #StringJogo
 	loadn r2, #0
@@ -151,7 +157,7 @@ InitialMsg:
 	
 	rts
 
-IntroMsg:
+IntroMsg:; Mensagem introdútória
 	loadn r0, #160
 	loadn r1, #StringIntro
 	loadn r2, #0
@@ -446,7 +452,7 @@ Nvl3Msg:
 
 	rts	
 
-Nvl1Reader:
+Nvl1Reader:; Define a leitura de botões corretas para o nível 1
 
 	loadn r0, #160
 	loadn r1, #StringQuestionMark
@@ -464,7 +470,23 @@ Nvl1Reader:
 
 	rts
 	
-Nvl2Reader:
+Nvl2Reader:;Define a leitura de botões corretas para o nível 2
+
+	loadn r0, #160
+	loadn r1, #StringQuestionMark
+	loadn r2, #0
+	call Print
+	
+	loadn r0, #800
+	loadn r1, #StringPressToColor
+	loadn r2, #0
+	call Print
+	
+	call RPress
+	call GPress
+	call BPress
+
+	rts
 
 	loadn r0, #160
 	loadn r1, #StringQuestionMark
@@ -484,7 +506,23 @@ Nvl2Reader:
 
 	rts
 	
-Nvl3Reader:
+Nvl3Reader:;Define a leitura de botões corretas para o nível 3
+
+	loadn r0, #160
+	loadn r1, #StringQuestionMark
+	loadn r2, #0
+	call Print
+	
+	loadn r0, #800
+	loadn r1, #StringPressToColor
+	loadn r2, #0
+	call Print
+	
+	call RPress
+	call GPress
+	call BPress
+
+	rts
 
 	loadn r0, #160
 	loadn r1, #StringQuestionMark
@@ -594,7 +632,7 @@ StringApagaTela: string "
                                       
                                       "
 
-;----  Blocks
+;----  Blocks - Posições de cor na tela para memorizar
 StringBlock1: string
 "  ####                                 
   ####                                 

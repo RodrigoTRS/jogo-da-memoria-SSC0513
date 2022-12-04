@@ -28,11 +28,11 @@
 			"buffers":
 			[
 				{
-					"file": "/D/Simulador/Hello4.asm",
+					"file": "/C/Users/rodri/OneDrive/_Nativo/Área de Trabalho/jogo-da-memoria-SSC0513/JogoDaMemoria.asm",
 					"settings":
 					{
-						"buffer_size": 2648,
-						"line_ending": "Unix"
+						"buffer_size": 13344,
+						"line_ending": "Windows"
 					}
 				}
 			],
@@ -68,6 +68,10 @@
 			},
 			"file_history":
 			[
+				"/C/Users/rodri/OneDrive/_Nativo/Área de Trabalho/Simulador/JogoDaMemoria.asm",
+				"/C/Users/rodri/OneDrive/_Nativo/Área de Trabalho/Simulador/Teste.asm",
+				"/C/Users/rodri/OneDrive/_Nativo/Área de Trabalho/Simulador/Hello4.asm",
+				"/D/Simulador/Hello4.asm",
 				"/D/Teste Ambiente/Hello4.asm",
 				"/D/Teste Ambiente/leString.asm",
 				"/D/Teste Ambiente/forca.asm",
@@ -131,19 +135,19 @@
 					[
 						{
 							"buffer": 0,
-							"file": "/D/Simulador/Hello4.asm",
+							"file": "/C/Users/rodri/OneDrive/_Nativo/Área de Trabalho/jogo-da-memoria-SSC0513/JogoDaMemoria.asm",
 							"semi_transient": false,
 							"settings":
 							{
-								"buffer_size": 2648,
+								"buffer_size": 13344,
 								"regions":
 								{
 								},
 								"selection":
 								[
 									[
-										0,
-										0
+										11494,
+										11494
 									]
 								],
 								"settings":
@@ -194,13 +198,13 @@
 			"menu_visible": true,
 			"output.exec":
 			{
-				"height": 179.0
+				"height": 432.0
 			},
 			"output.find_results":
 			{
 				"height": 0.0
 			},
-			"position": "0,0,1,-75,-1,-1,-1,646,31,107,687",
+			"position": "0,2,3,-1,-1,-1,-1,989,31,107,687",
 			"project": "",
 			"replace":
 			{
