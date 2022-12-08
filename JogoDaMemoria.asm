@@ -150,7 +150,7 @@ InitialMsg:; Mensagem inicial
 	loadn r2, #2816
 	call Print
 	
-	loadn r0, #1008
+	loadn r0, #1005
 	loadn r1, #StringPressSpaceToStart
 	loadn r2, #1536
 	call Print
@@ -163,7 +163,7 @@ IntroMsg:; Mensagem introdútória
 	loadn r2, #0
 	call Print
 	
-	loadn r0, #1008
+	loadn r0, #1004
 	loadn r1, #StringPressSpaceToContinue
 	loadn r2, #1536
 	call Print
@@ -176,7 +176,7 @@ LossMsg:
 	loadn r2, #0
 	call Print
 	
-	loadn r0, #1008
+	loadn r0, #1004
 	loadn r1, #StringPressSpaceToRestart
 	loadn r2, #1536
 	call Print
@@ -189,7 +189,7 @@ WinMsg:
 	loadn r2, #0
 	call Print
 	
-	loadn r0, #1008
+	loadn r0, #1004
 	loadn r1, #StringPressSpaceToRestart
 	loadn r2, #1536
 	call Print
@@ -311,7 +311,7 @@ RestartReader:
 
 Nvl1Msg:
 
-	loadn r0, #1008
+	loadn r0, #1004
 	loadn r1, #StringPressSpaceToContinue
 	loadn r2, #0
 	call Print
@@ -343,7 +343,7 @@ Nvl1Msg:
 
 Nvl2Msg:
 
-	loadn r0, #1008
+	loadn r0, #1004
 	loadn r1, #StringPressSpaceToContinue
 	loadn r2, #0
 	call Print
@@ -391,7 +391,7 @@ Nvl2Msg:
 	
 Nvl3Msg:
 
-	loadn r0, #1008
+	loadn r0, #1004
 	loadn r1, #StringPressSpaceToContinue
 	loadn r2, #0
 	call Print
@@ -482,22 +482,6 @@ Nvl2Reader:;Define a leitura de botões corretas para o nível 2
 	loadn r2, #0
 	call Print
 	
-	call RPress
-	call GPress
-	call BPress
-
-	rts
-
-	loadn r0, #160
-	loadn r1, #StringQuestionMark
-	loadn r2, #0
-	call Print
-	
-	loadn r0, #800
-	loadn r1, #StringPressToColor
-	loadn r2, #0
-	call Print
-	
 	call GPress
 	call RPress
 	call GPress
@@ -518,29 +502,13 @@ Nvl3Reader:;Define a leitura de botões corretas para o nível 3
 	loadn r2, #0
 	call Print
 	
-	call RPress
-	call GPress
-	call BPress
-
-	rts
-
-	loadn r0, #160
-	loadn r1, #StringQuestionMark
-	loadn r2, #0
-	call Print
-	
-	loadn r0, #800
-	loadn r1, #StringPressToColor
-	loadn r2, #0
-	call Print
-	
 	call BPress
 	call RPress
 	call BPress
 	call GPress
 	call BPress
 	call RPress
-	call BPress
+	call GPress
 
 	rts
 ;
@@ -550,16 +518,16 @@ Nvl3Reader:;Define a leitura de botões corretas para o nível 3
 ; String Building
 ;
 ;----  Intrucoes de Menu
-StringPressSpaceToStart: string "Press SPACE to begin"
+StringPressSpaceToStart: string "Pressione ESPACO para comecar"
 
-StringPressSpaceToContinue: string "Press SPACE to continue"
+StringPressSpaceToContinue: string "Pressione ESPACO para continuar"
 
-StringPressSpaceToRestart: string "Press SPACE to restart"
+StringPressSpaceToRestart: string "Pressione ESPACO para recomecar"
 
 StringPressToColor: string
-"             Press R to RED            
-            Press B to BLUE            
-            Press G to GREEN           "
+"     Pressione R para vermelho(RED)    
+       Pressione B para azul(BLUE)      
+     Pressione G para verder(GREEN)     "
             
 StringQuestionMark: string
 "    ###############################    

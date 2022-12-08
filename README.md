@@ -19,3 +19,4 @@ então o jogo deve rodar.
 ## Links úteis
 
 GitLab da Simões: https://gitlab.com/simoesusp/disciplinas
+Video no YouTube: https://youtu.be/yhMgHAtHG1U
